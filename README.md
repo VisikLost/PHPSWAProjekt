@@ -21,3 +21,11 @@ Technologie
 - Backend: (PHP)
 - Frontend: (HTML, CSS, JavaScript)
 - Databáze: (MySQL)
+
+Použití
+
+- Po registraci a přihlášení si uživatel může prohlížet dostupné knihy a vypůjčit si je.
+- Uživatel vidí seznam svých výpůjček a může je vrátit.
+- Administrátor má možnost spravovat knihy a vracet je i bez souhlasu uživatele.
+
+Autor: Jan Laurenčík
