@@ -6,10 +6,10 @@ Tento projekt je webová aplikace pro správu knihovny, která umožňuje uživa
 
 Uživatel:
 
-Registrace a přihlášení
-Prohlížení dostupných knih
-Vypůjčení knihy
-Vrácení vypůjčené knihy
+Registrace a přihlášení.
+Prohlížení dostupných knih.
+Vypůjčení knihy.
+Vrácení vypůjčené knihy.
 
 Administrátor (knihovník):
 
