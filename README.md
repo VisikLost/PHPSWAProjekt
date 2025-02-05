@@ -6,18 +6,18 @@ Tento projekt je webová aplikace pro správu knihovny, která umožňuje uživa
 
 Uživatel:
 
-  Registrace a přihlášení
-  Prohlížení dostupných knih
-  Vypůjčení knihy
-  Vrácení vypůjčené knihy
+Registrace a přihlášení
+Prohlížení dostupných knih
+Vypůjčení knihy
+Vrácení vypůjčené knihy
 
 Administrátor (knihovník):
 
-  Správa knih
-  Vrácení vypůjčených knih bez souhlasu uživatele
+Správa knih
+Vrácení vypůjčených knih bez souhlasu uživatele
 
 Technologie
 
-  Backend: (PHP)
-  Frontend: (HTML, CSS, JavaScript)
-  Databáze: (MySQL)
+Backend: (PHP)
+Frontend: (HTML, CSS, JavaScript)
+Databáze: (MySQL)
