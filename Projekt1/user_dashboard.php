@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-// Redirect if not logged in or not a regular user
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] === 'admin') {
     header('Location: authenticate.php');
     exit;
 }
 
-include 'db.php'; // Database connection
+include 'db.php';
 
-// Fetch available books (not borrowed)
 $stmt = $pdo->query('SELECT * FROM books WHERE is_borrowed = 0');
 $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
