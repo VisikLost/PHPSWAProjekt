@@ -1,24 +1,19 @@
 <?php
 session_start();
 
-// Redirect if not logged in or not admin
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     header('Location: authenticate.php');
     exit;
 }
 
-// Database connection
 require 'db.php';
 
-// Fetch borrowed books (where is_borrowed = 1)
 $borrowedBooksQuery = $pdo->query("SELECT * FROM books WHERE is_borrowed = 1");
 $borrowedBooks = $borrowedBooksQuery->fetchAll(PDO::FETCH_ASSOC);
 
-// Handle force return of a borrowed book
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['force_return_book_id'])) {
     $forceReturnBookId = $_POST['force_return_book_id'];
 
-    // Mark the book as available and update the borrowed_by to NULL
     $pdo->prepare("UPDATE books SET is_borrowed = 0, borrowed_by = NULL WHERE id = ?")
         ->execute([$forceReturnBookId]);
 
