@@ -2,16 +2,13 @@
 session_start();
 include 'db.php';
 
-// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-    $role = 'user'; // All new users will be regular users
+    $role = 'user';
 
-    // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Check if the username already exists
     $stmt = $pdo->prepare('SELECT * FROM users WHERE username = ?');
     $stmt->execute([$username]);
     $user = $stmt->fetch();
@@ -19,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($user) {
         echo "Username already taken. Please choose a different one.";
     } else {
-        // Insert the new user into the database
         $stmt = $pdo->prepare('INSERT INTO users (username, password, role) VALUES (?, ?, ?)');
         $stmt->execute([$username, $hashedPassword, $role]);
 
