@@ -2,7 +2,7 @@
 $host = 'localhost:3306';
 $db = 'laurencikj_'; // Replace with your database name
 $user = 'laurencikj'; // Replace with your database username
-$pass = 'lasgalen1'; // Replace with your database password
+$pass = ''; // Replace with your database password
 $charset = 'utf8mb4';
 
 try {
